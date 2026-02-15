@@ -35,7 +35,7 @@ flask run
 node server/server.cjs
 ```
 
-Open [127.0.0.1:5000](127.0.0.1:5000) in your browser
+Open [127.0.0.1:5000](http://127.0.0.1:5000) in your browser
 
 # Credits
 
