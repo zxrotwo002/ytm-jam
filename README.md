@@ -17,6 +17,9 @@ pip install -r requirements.txt
 ytmusicapi browser
 ```
 
+Follow the instructions of the [ytmusicapi](https://ytmusicapi.readthedocs.io/en/stable/setup/browser.html)
+
+
 Add the script in [tampermonkey](tampermonkey) as new userscript in tampermonkey
 
 
