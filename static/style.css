@@ -141,6 +141,15 @@ a.video {
     min-width: 250px;
 }
 
+a.playlist {
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 250px;
+}
+
 a.artist {
     color: #aaa;
     text-decoration: none;
