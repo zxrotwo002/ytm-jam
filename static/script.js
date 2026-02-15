@@ -9,7 +9,7 @@ function add(e,title,artist,id,action) {
     }, 500);
 
 
-    fetch("http://localhost:3000/command", {
+    fetch("http://" + window.location.hostname + ":3000/command", {
         method: "POST",
         body: JSON.stringify({
             "videoId": id, 
