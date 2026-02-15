@@ -1,0 +1,4 @@
+ytmusicapi
+flask
+python-dotenv
+dominate

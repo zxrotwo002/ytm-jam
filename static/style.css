@@ -1,0 +1,231 @@
+/* General Reset & Background */
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* Header & Navigation */
+#header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+#header ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+}
+
+#header a {
+    color: #aaa;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+#header a:hover {
+    color: #fff;
+}
+
+/* Search Container */
+#container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.form-control {
+    width: 100%;
+    padding: 14px 25px;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.autoComplete {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #282828;
+    border-radius: 12px;
+    margin-top: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.autoComplete .row {
+    padding: 12px 20px;
+    border-bottom: 1px solid #383838;
+    text-align: left;
+}
+
+.autoComplete .row a {
+    color: #eee;
+    text-decoration: none;
+    display: block;
+}
+
+.autoComplete .row:hover { background: #3e3e3e; }
+
+/* Section Titles */
+p {
+    width: 100%;
+    max-width: 1200px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Item Rows */
+div:has(img) {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.2s;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+div:has(img):hover { background: #1e1e1e; }
+
+img {
+    border-radius: 4px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Artist Profile Large Image */
+img[width="200"] {
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    border: 4px solid #222;
+}
+
+/* Text Elements */
+a.video {
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 250px;
+}
+
+a.artist {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-right: 10px;
+}
+
+a.artist:hover { color: #fff; text-decoration: underline; }
+
+.subscribers {
+    display: block;
+    color: #888;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* --- REACTIVE BUTTONS --- */
+.button {
+    position: relative;
+    background: #2a2a2a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.1s;
+    flex-shrink: 0;
+    min-width: 120px; /* Ensures button doesn't jump size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Push first button to the right */
+div:has(img) button:first-of-type {
+    margin-left: auto;
+}
+
+.button.next {
+    background: #ffffff;
+    color: #000;
+}
+
+/* Hover State */
+.button:hover {
+    transform: scale(1.05);
+    background: #444;
+}
+.button.next:hover { background: #ddd; }
+
+/* The Success State (Applied by JS) */
+.button.active-click {
+    background-color: #2ecc71 !important;
+    color: transparent !important;
+    transform: scale(0.95);
+}
+
+.button.active-click::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.button.next.active-click::after {
+    color: black; /* For visibility on the white button */
+}
+
+/* Outdated Browser Warning */
+.browsehappy {
+    width: 100%;
+    background: #ffcc00;
+    color: #000;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    div:has(img) { white-space: normal; flex-wrap: wrap; }
+    div:has(img) button:first-of-type { margin-left: 0; }
+}
