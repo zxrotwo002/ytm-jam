@@ -28,14 +28,14 @@ Add the script in [tampermonkey](tampermonkey) as new userscript in tampermonkey
 
 # Usage
 ```
-flask run
+flask run -h 0.0.0.0
 ```
 
 ```
-node server/server.cjs
+node server/server.cjs 
 ```
 
-Open [127.0.0.1:5000](http://127.0.0.1:5000) in your browser
+Open [127.0.0.1:5000](http://127.0.0.1:5000) in your browser or `<your-ip>:5000`
 
 # Credits
 
