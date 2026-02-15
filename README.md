@@ -1,3 +1,5 @@
+# For some parts of this project i used Gen AI, more information below 
+
 # Setup
 ```
 git clone https://github.com/zxrotwo002/ytm-jam.git
