@@ -1,5 +1,7 @@
 # Setup
 ```
+git clone https://github.com/zxrotwo002/ytm-jam.git
+cd ytm-jam
 python -m venv .venv
 ```
 ## Windows
